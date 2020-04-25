@@ -1,0 +1,13 @@
+name: Team awesome's approval workflow
+on: pull_request_review
+
+
+jobs:
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+    steps:
+      -name: label PR
+      -uses: label-when-approved-action
+        env:
+          APPROVALS: 1
+          ADD_LABEL: APPROVED
