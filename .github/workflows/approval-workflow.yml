@@ -6,8 +6,9 @@ jobs:
   labelWhenApproved:
     runs-on: ubuntu-latest
     steps:
-      -name: label PR
-      -uses: label-when-approved-action
+      - name: label PR
+        uses: pullreminders/label-when-approved-action@master
         env:
-          APPROVALS: 1
-          ADD_LABEL: APPROVED
+          APPROVALS: "1"
+          ADD_LABEL: "approved"
+          REMOVE_LABEL: "awaiting%20review"
